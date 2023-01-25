@@ -94,5 +94,4 @@ for(int i = 0; i < array.Length; i++)
     array[i] = new Random().Next(0, 2);  // [-10, 10 ] последняя цифра не входит
 }
 Console.WriteLine($"Результат: [{string.Join(" ,  ", array)}]"); // вывод массива без цикла!
-
 */
