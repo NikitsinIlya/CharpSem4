@@ -52,6 +52,43 @@ for(int i = 0; i < array.Length; i++)
 Console.WriteLine($"Результат: [{string.Join(" , ", array)}]"); // вывод массива без цикла!
 */
 
+// Суперсдвиг
+/*
+Console.Write("Введите количество элементов : ");
+int n = Convert.ToInt32(Console.ReadLine());
+int[] array = new int[n];
+for(int i = 0; i < array.Length; i++)
+{
+    Console.WriteLine("Введите данные массива: ");
+    array[i] = Convert.ToInt32(Console.ReadLine());
+}
+Console.WriteLine($"Массив: [{string.Join(" , ", array)}]"); 
+Console.WriteLine("Введите сдвиг: ");
+int zdvig = Convert.ToInt32(Console.ReadLine()), z1 = 0;
+if(zdvig > 0 ) 
+ {
+    for( int count = 0; count < zdvig ; count++)
+    {
+        z1 = array[n - 1];
+        for(int k = n - 1; k > 0; k-- ) array[k] = array[k - 1];
+        array[0] = z1;
+    }
+ }
+ else if(zdvig < 0)
+ {
+ for( int count = n - 1; count > 1 ; count--)
+    {
+        z1 = array[0];
+        for(int k = 0; k < n - 1 ; k++ ) array[k] = array[k + 1];
+        array[n - 1] = z1;
+    }
+ }   
+ Console.WriteLine($"Результат сдвига {zdvig}: [{string.Join(" , ", array)}]");
+
+*/
+
+// Гипотеза Гольдбаха
+
 Console.Write("Введите число : ");
 int n = Convert.ToInt32(Console.ReadLine()), n1 = 1, n2 = 0, p1 = 2; 
 double sqrtn = Math.Round(Math.Sqrt(n));
