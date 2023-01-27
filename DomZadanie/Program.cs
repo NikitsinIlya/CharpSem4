@@ -87,7 +87,7 @@ if(zdvig > 0 )
 
 */
 
-// Гипотеза Гольдбаха
+// Гипотеза Гольдбаха )) не решил
 
 Console.Write("Введите число : ");
 int n = Convert.ToInt32(Console.ReadLine()), n1 = 1, n2 = 0, p1 = 2, count = 0; 
