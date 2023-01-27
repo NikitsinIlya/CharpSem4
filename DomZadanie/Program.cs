@@ -90,7 +90,7 @@ if(zdvig > 0 )
 // Гипотеза Гольдбаха
 
 Console.Write("Введите число : ");
-int n = Convert.ToInt32(Console.ReadLine()), n1 = 1, n2 = 0, p1 = 2; 
+int n = Convert.ToInt32(Console.ReadLine()), n1 = 1, n2 = 0, p1 = 2, count = 0; 
 double sqrtn = Math.Round(Math.Sqrt(n));
 
 for( int i = 2; i < n/2; i++)
@@ -99,13 +99,14 @@ for( int i = 2; i < n/2; i++)
     n2 = n - i;
     while(p1 <= sqrtn )
     {
-        if(n1 % p1 != 0 || n2 % p1 != 0)
+        if(n1 % p1 != 0 && n2 % p1 != 0)
         {
             Console.WriteLine($"{n1} , {n2}");
             break;
         }
+        
         p1++;
     }
-    
-
+    p1 = 2;
+ 
 }
